@@ -159,6 +159,46 @@
     <section id="experience" class="section">
       <h2 class="section-title"><span>Experience</span></h2>
       <div class="timeline">
+        <article class="timeline-item" data-year="2026">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div class="timeline-header-text">
+              <h3>YU SHENG Construction Co, Ltd</h3>
+              <span class="role">AI Engineer</span>
+              <span class="period">Jan 2026 — Present · Taichung, Taiwan (On-site)</span>
+              </div>
+            </div>
+            <p>Built an AI-powered construction cost intelligence platform, digitizing the company's manual cost estimation workflow into a fully automated, queryable system. Sole AI engineer — designed and shipped the complete infrastructure from document ingestion and anomaly detection to an agentic chat interface and vector search.</p>
+            <ul>
+              <li>Vision-based document extraction pipeline (GPT-4o mini) to auto-detect column schemas from any Excel format, eliminating manual data entry across complex multi-sheet cost estimate files</li>
+              <li>Two-layer anomaly detection engine combining statistical analysis (Z-score + IQR) with GPT-4o reasoning to flag and explain unusual pricing across construction line items</li>
+              <li>Agentic AI chat interface with a 5-tool RAG loop — combining SQL lookups and vector semantic search — letting project managers query pricing history in natural language</li>
+              <li>Vector embedding pipeline (text-embedding-3-small + PostgreSQL/pgvector) enabling cosine-similarity semantic search across thousands of cost line items</li>
+              <li>Automated nightly benchmark rebuilds via Celery Beat to keep anomaly detection thresholds current without manual intervention</li>
+            </ul>
+            <div class="exp-skills">
+              <span class="exp-skill">Python</span>
+              <span class="exp-skill">FastAPI</span>
+              <span class="exp-skill">SQLAlchemy</span>
+              <span class="exp-skill">React 18</span>
+              <span class="exp-skill">TypeScript</span>
+              <span class="exp-skill">Azure OpenAI</span>
+              <span class="exp-skill">RAG</span>
+              <span class="exp-skill">pgvector</span>
+              <span class="exp-skill">PostgreSQL</span>
+              <span class="exp-skill">Redis</span>
+              <span class="exp-skill">Celery</span>
+              <span class="exp-skill">Docker</span>
+              <span class="exp-skill">Nginx</span>
+              <span class="exp-skill">Supabase</span>
+              <span class="exp-skill">Azure Blob Storage</span>
+              <span class="exp-skill">Tailwind CSS</span>
+              <span class="exp-skill">Sentry</span>
+            </div>
+            <a href="https://www.yushengs.com.tw" target="_blank" rel="noopener" class="link">yushengs.com.tw →</a>
+          </div>
+        </article>
         <article class="timeline-item" data-year="2025">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
@@ -166,8 +206,8 @@
               <img src="assets/onebite-logo.png" alt="OneBite" class="company-logo" />
               <div class="timeline-header-text">
               <h3>OneBite</h3>
-              <span class="role">Founder & CEO</span>
-              <span class="period">Aug 2025 — Present · London</span>
+              <span class="role">Founder & Applied AI Engineer</span>
+              <span class="period">Aug 2025 — Dec 2025 · London</span>
               </div>
             </div>
             <p>Founded and shipped a production iOS restaurant tracking app end-to-end in Swift and SwiftUI (MVVM), released on the App Store.</p>
@@ -340,11 +380,11 @@
         </div>
         <div class="skill-category">
           <h4 class="skill-category-title">Backend &amp; Distributed Systems</h4>
-          <div class="skill-list">Node.js · FastAPI · Firebase · REST/GraphQL APIs · WebSockets · Microservices · Distributed Systems · System Design</div>
+          <div class="skill-list">Node.js · FastAPI · Firebase · SQLAlchemy · Celery · Nginx · REST/GraphQL APIs · WebSockets · Microservices · Distributed Systems · System Design</div>
         </div>
         <div class="skill-category">
           <h4 class="skill-category-title">Data &amp; Storage</h4>
-          <div class="skill-list">MongoDB · SQL · Redis · Relational Databases · Database Design · Data Pipelines · Data Ingestion · ETL · Data Validation</div>
+          <div class="skill-list">MongoDB · PostgreSQL · SQL · Redis · pgvector · Supabase · Relational Databases · Database Design · Data Pipelines · Data Ingestion · ETL · Data Validation</div>
         </div>
         <div class="skill-category">
           <h4 class="skill-category-title">Algorithms &amp; Analysis</h4>
@@ -352,7 +392,7 @@
         </div>
         <div class="skill-category">
           <h4 class="skill-category-title">Frontend</h4>
-          <div class="skill-list">React · Next.js · React Native · SwiftUI</div>
+          <div class="skill-list">React · Next.js · React Native · SwiftUI · Tailwind CSS · Vite</div>
         </div>
         <div class="skill-category">
           <h4 class="skill-category-title">Cloud/DevOps</h4>
@@ -360,7 +400,7 @@
         </div>
         <div class="skill-category">
           <h4 class="skill-category-title">Testing &amp; AI/ML</h4>
-          <div class="skill-list">Unit/Integration Testing · Automated Testing · OpenAI · Anthropic · Google Gemini · LangChain · FAISS · RAG Systems · Vector Search · Embeddings</div>
+          <div class="skill-list">Unit/Integration Testing · Automated Testing · OpenAI · Azure OpenAI · Anthropic · Google Gemini · LangChain · FAISS · RAG Systems · Vector Search · Embeddings · Prompt Engineering</div>
         </div>
         <div class="skill-category">
           <h4 class="skill-category-title">AI Coding Tools</h4>
