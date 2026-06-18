@@ -36,7 +36,7 @@
         <span class="line accent">Chen</span>
       </h1>
           <p class="hero-tagline">
-        Mechatronics-trained software engineer who shipped Pricio (AI resale marketplace) and built OneBite from the ground up. Architecting scalable full-stack systems, iOS applications, and AI-powered solutions.
+        Mechatronics-trained software engineer who co-founded Pricio (AI-powered p2p marketplace) and shipped OneBite to the App Store. Building full-stack systems, iOS applications, and AI-powered products end-to-end.
         <br />First-principles thinking × modern AI tools.
       </p>
       <div class="hero-stats">
@@ -159,51 +159,6 @@
     <section id="experience" class="section">
       <h2 class="section-title"><span>Experience</span></h2>
       <div class="timeline">
-        <article class="timeline-item" data-year="2026">
-          <div class="timeline-marker"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <img src="assets/YuSheng_logo.png" alt="YU SHENG Construction" class="company-logo" />
-              <div class="timeline-header-text">
-              <h3>YU SHENG Construction Co, Ltd</h3>
-              <span class="role">AI Engineer</span>
-              <span class="period">Jan 2026 — Present · Taichung, Taiwan</span>
-              </div>
-            </div>
-            <p>Built an AI-powered construction cost intelligence platform on Microsoft Azure, digitizing the company's manual cost estimation workflow into a fully automated, queryable system — covering document ingestion, anomaly detection, an agentic chat interface, and vector search.</p>
-            <ul>
-              <li>Vision-based document extraction pipeline (GPT-4o mini) to auto-detect column schemas from any Excel format, eliminating manual data entry across complex multi-sheet cost estimate files</li>
-              <li>Two-layer anomaly detection engine combining statistical analysis (Z-score + IQR) with GPT-4o reasoning to flag and explain unusual pricing across construction line items</li>
-              <li>Agentic AI chat interface with a 5-tool RAG loop — combining SQL lookups and vector semantic search — letting project managers query pricing history in natural language</li>
-              <li>Vector embedding pipeline (text-embedding-3-small + PostgreSQL/pgvector) enabling cosine-similarity semantic search across thousands of cost line items</li>
-              <li>Automated nightly benchmark rebuilds via Celery Beat to keep anomaly detection thresholds current without manual intervention</li>
-            </ul>
-            <div class="exp-skills">
-              <span class="exp-skill">Python</span>
-              <span class="exp-skill">FastAPI</span>
-              <span class="exp-skill">SQLAlchemy</span>
-              <span class="exp-skill">React 18</span>
-              <span class="exp-skill">TypeScript</span>
-              <span class="exp-skill">Azure OpenAI</span>
-              <span class="exp-skill">RAG</span>
-              <span class="exp-skill">pgvector</span>
-              <span class="exp-skill">PostgreSQL</span>
-              <span class="exp-skill">Redis</span>
-              <span class="exp-skill">Celery</span>
-              <span class="exp-skill">Docker</span>
-              <span class="exp-skill">Nginx</span>
-              <span class="exp-skill">Supabase</span>
-              <span class="exp-skill">Azure Blob Storage</span>
-              <span class="exp-skill">Tailwind CSS</span>
-              <span class="exp-skill">Sentry</span>
-              <span class="exp-skill">SSE</span>
-              <span class="exp-skill">JWT Authentication</span>
-              <span class="exp-skill">Async Programming</span>
-              <span class="exp-skill">pytest</span>
-            </div>
-            <a href="https://www.yushengs.com.tw" target="_blank" rel="noopener" class="link">yushengs.com.tw →</a>
-          </div>
-        </article>
         <article class="timeline-item" data-year="2025">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
@@ -215,12 +170,11 @@
               <span class="period">Aug 2025 — Dec 2025 · London</span>
               </div>
             </div>
-            <p>Founded and shipped a production iOS restaurant tracking app end-to-end in Swift and SwiftUI (MVVM), released on the App Store.</p>
+            <p>Sole technical founder: designed, built, and shipped a production iOS restaurant tracking app (SwiftUI, Firebase, REST APIs) from concept to App Store, owning every engineering and product decision end-to-end.</p>
             <ul>
-              <li>Integrated multiple REST APIs (OpenAI, Google Places, Firebase) with async/await, handling real-time UI updates and error states</li>
+              <li>Built an AI-powered "For You" personalised restaurant recommendation feature — iOS collects user context (GPS location, cuisine preference, time of day, up to 20 logged restaurants as taste history) and calls a Firebase Cloud Function that builds a structured GPT-4o prompt and returns 5 tailored picks with personalised reasons</li>
+              <li>Michelin mode cross-references a Firestore dataset of 12,000+ Michelin-starred restaurants; post-processing via MapKit geocoding corrects AI coordinate imprecision on-device with the API key never stored on device</li>
               <li>Firebase Authentication for account management · Firestore for cloud and offline-first local data persistence</li>
-              <li>AI recommendation engine via Firebase Cloud Functions — personalised context (location, history, cuisine, time of day)</li>
-              <li>Custom fuzzy matching algorithm against 12,000+ Michelin-starred restaurants using multi-signal confidence scoring</li>
             </ul>
             <div class="exp-skills">
               <span class="exp-skill">Swift</span>
@@ -251,26 +205,28 @@
               <span class="period">Sep 2024 — May 2025 · London</span>
               </div>
             </div>
-            <p>AI-powered peer-to-peer marketplace suggesting fair prices from photos.</p>
+            <p>Co-founded a peer-to-peer second-hand marketplace where users list items, browse listings on a map, get AI-powered pricing, and negotiate via real-time chat.</p>
             <ul>
-              <li>Scalable backend (Node.js/TypeScript) with MongoDB, microservices, REST & WebSockets</li>
-              <li>Automated data pipelines with validation and error handling</li>
-              <li>CI/CD (Vercel/GitHub Actions), 40% API load time reduction</li>
+              <li>AI pricing pipeline: GPT-4o vision identifies the item and assesses tradability → Google Custom Search fetches live market price data → GPT-4o-mini synthesises a structured price estimate (Zod schema validation); conversational mode uses multi-turn GPT-4 to gather condition/location details and generate a ready-to-post listing</li>
+              <li>Dual-server architecture: Next.js 15 API routes + standalone Socket.io server (ts-node) for real-time chat with room management, typing indicators, and delivery/read receipts; Mapbox GL for map view</li>
+              <li>Auth via NextAuth v5 (Google OAuth + email/password with Nodemailer verification and bcrypt hashing); MongoDB for all persistence and AWS S3 for image storage</li>
             </ul>
             <div class="exp-skills">
-              <span class="exp-skill">Node.js</span>
+              <span class="exp-skill">Next.js 15</span>
               <span class="exp-skill">TypeScript</span>
+              <span class="exp-skill">React</span>
               <span class="exp-skill">MongoDB</span>
-              <span class="exp-skill">REST APIs</span>
+              <span class="exp-skill">Socket.io</span>
               <span class="exp-skill">WebSockets</span>
-              <span class="exp-skill">Microservices</span>
-              <span class="exp-skill">CI/CD</span>
-              <span class="exp-skill">GitHub Actions</span>
-              <span class="exp-skill">Distributed Systems</span>
-              <span class="exp-skill">Data Pipelines</span>
-              <span class="exp-skill">Performance Optimization</span>
-              <span class="exp-skill">AI</span>
-              <span class="exp-skill">Project Management</span>
+              <span class="exp-skill">GPT-4o</span>
+              <span class="exp-skill">OpenAI</span>
+              <span class="exp-skill">Google Custom Search</span>
+              <span class="exp-skill">Mapbox GL</span>
+              <span class="exp-skill">NextAuth</span>
+              <span class="exp-skill">AWS S3</span>
+              <span class="exp-skill">Zod</span>
+              <span class="exp-skill">Nodemailer</span>
+              <span class="exp-skill">Tailwind CSS</span>
             </div>
             <a href="https://github.com/KaleLjl/pri-cio" target="_blank" rel="noopener" class="link">pri-cio (GitHub) →</a>
           </div>
@@ -311,27 +267,19 @@
       <div class="projects-grid">
         <div class="project-card project-featured">
           <img src="assets/flexgrid-ai.png" alt="FlexGrid AI dashboard showing risk assessment and map" class="project-img" />
-          <span class="project-tag">Hackathon · Top 10</span>
+          <span class="project-tag">Hackathon · Top 10 · AI Agent</span>
           <h3>FlexGrid AI</h3>
-          <p>AI-powered orchestration system for Distribution System Operators (DSOs) that forecasts grid overloads and coordinates load flexibility to prevent feeder-level congestion. Built full Beckn Protocol implementation for Distributed Energy Resource (DER) discovery and orchestration, AI-driven flexibility planning via Google Gemini, and a real-time grid risk assessment engine. Command-centre dashboard with interactive visualization of thermal derating, solar PV efficiency drops, and mitigation plans. Placed Top 10 in AI Agent Hackathon x DEG.</p>
+          <p>An autonomous AI agent for grid operators that forecasts feeder-level overload risks and coordinates distributed energy resources to prevent congestion — built and shipped under 48-hour hackathon constraints. Three-stage pipeline: weather-driven risk assessment (CRITICAL/HIGH/MEDIUM/LOW load thresholds), Google Gemini AI flexibility planning generating urgency-scored DER dispatch plans, and full Beckn Protocol orchestration (Search → Select → Confirm) across battery discharge, EV load reduction, HVAC shifting, and mobile generation. React/Leaflet command-centre dashboard with real-time map visualisation and timestamped AI decision audit logs. Placed Top 10 in AI Agent Hackathon x DEG.</p>
           <div class="project-links">
             <a href="https://github.com/STV1222/AI-Agent-Hackathon-x-DEG" target="_blank" rel="noopener" class="project-link">Repo</a>
             <a href="https://www.youtube.com/watch?v=jDOHLDDqOqw" target="_blank" rel="noopener" class="project-link">Demo</a>
           </div>
         </div>
         <div class="project-card">
-          <span class="project-tag">Personal Project · AI Workflow Automation</span>
-          <h3>OpsPilot AI</h3>
-          <p>Full-stack AI workflow automation platform — Java 21 · Spring Boot 3 · Spring WebFlux backend, Next.js 14 · TypeScript · Tailwind CSS frontend. Automates procurement for SMEs using a ReAct-pattern AI Agent: the LLM autonomously decides which tools to call via an MCP-inspired tool layer (PdfTool, ExcelTool, EmbeddingSearchTool), in what order, and when it's done — not a hardcoded pipeline. The Quotation Comparison skill ingests supplier PDFs and Excel files, runs a 5-tool agent loop (extract → detect anomalies → compare → generate report → submit), and routes to a manager for human-in-the-loop approval. Temporal handles durable, retry-safe orchestration; PostgreSQL + pgvector for semantic search; Redis for caching; Docker Compose for the full 6-service local stack.</p>
-          <div class="project-links">
-            <a href="https://github.com/STV1222/Ops-Pilot-AI" target="_blank" rel="noopener" class="project-link">Repo</a>
-          </div>
-        </div>
-        <div class="project-card">
           <img src="https://raw.githubusercontent.com/STV1222/RouteIQ/main/assets/routeiq_system_architecture.svg" alt="RouteIQ system architecture showing intelligent LLM request routing" class="project-img" />
           <span class="project-tag">Personal Project · LLM Cost Optimizer</span>
           <h3>RouteIQ</h3>
-          <p>An intelligent LLM proxy that automatically routes each AI request to the cheapest model capable of handling it—saving 50–90% on costs with zero code changes. Sits between your app and LLM providers, classifying request complexity in under 5ms (no LLM call) and dispatching to the right model. Supports OpenAI, Anthropic, Google Gemini, and DeepSeek via OpenRouter. Includes a real-time cost and savings dashboard, per-key budget enforcement, Redis caching, and a one-command AWS serverless deployment via SAM.</p>
+          <p>A drop-in LLM proxy that intelligently routes each API request to the cheapest capable model, achieving 50–90% cost reduction with zero changes to existing client code. A pure-Python complexity classifier scores requests 0–100 across seven categories (translation through agentic tasks) in under 5ms — no LLM call required. Supports six providers (Gemini Flash Lite, DeepSeek v3, GPT-5.4, Claude Haiku/Sonnet/Opus); FastAPI backend with full streaming, Redis caching, DynamoDB API key and per-customer budget management, and a per-request cost and savings dashboard. Deployed serverless on AWS Lambda via SAM/CloudFormation with 64 pytest tests.</p>
           <div class="project-links">
             <a href="https://github.com/STV1222/RouteIQ" target="_blank" rel="noopener" class="project-link">Repo</a>
           </div>
@@ -340,7 +288,7 @@
           <img src="assets/light-ai.png" alt="Light AI desktop application interface" class="project-img" />
           <span class="project-tag">macOS · SwiftUI</span>
           <h3>Light AI</h3>
-          <p>Retrieval-Augmented Generation (RAG) app for macOS that combines local embeddings (EmbeddingGemma-300M) with cloud AI (GPT) for intelligent document search and Q&amp;A. Supports PDF, DOCX, CSV, HTML and code files. Automated document ingestion pipeline with semantic chunking and 768-dimensional vector similarity search. Cost-optimized hybrid architecture achieves ~80% cost reduction vs. full-cloud solutions while preserving search quality.</p>
+          <p>A native macOS document intelligence app that lets users query their own files in natural language using a fully custom RAG pipeline built from scratch in Swift — no framework used. Four-component pipeline: document ingestion across 30+ file types with intelligent 2000-character chunking, local embedding inference via Python subprocess (Google EmbeddingGemma-300m, sentence-transformers), in-memory 768-dimensional cosine similarity vector store (top-20 retrieval, 0.2 confidence threshold), and GPT-5 Nano for final responses with automatic citations. Hybrid local/cloud architecture runs all document processing locally, achieving 80% API cost reduction.</p>
           <div class="project-links">
             <a href="https://github.com/STV1222/Smart_light_swift.git" target="_blank" rel="noopener" class="project-link">Repo</a>
             <a href="https://www.youtube.com/watch?v=X0UL45GIJEw" target="_blank" rel="noopener" class="project-link">Demo</a>
@@ -414,7 +362,7 @@
         </div>
         <div class="skill-category">
           <h4 class="skill-category-title">Testing &amp; AI/ML</h4>
-          <div class="skill-list">pytest · Unit/Integration Testing · Automated Testing · ReAct Agent · OpenAI · Azure OpenAI · OpenRouter · Anthropic · Google Gemini · LangChain · FAISS · RAG Systems · Vector Search · Embeddings · Prompt Engineering</div>
+          <div class="skill-list">pytest · Unit/Integration Testing · Automated Testing · ReAct Agent · OpenAI · Azure OpenAI · OpenRouter · Anthropic · Google Gemini · LangChain · LangGraph · FAISS · RAG Systems · Vector Search · Embeddings · Prompt Engineering</div>
         </div>
         <div class="skill-category">
           <h4 class="skill-category-title">AI Coding Tools</h4>
@@ -439,6 +387,10 @@
           <a href="assets/matlab-cert.pdf" target="_blank" rel="noopener" class="cert-card" title="View full certificate (PDF)">
             <img src="assets/matlab-cert.png" alt="MATLAB certificate" class="cert-img" />
             <span class="cert-name">MATLAB</span>
+          </a>
+          <a href="https://huggingface.co/spaces/chchsyu/Final_Assignment_Template/tree/main" target="_blank" rel="noopener" class="cert-card" title="View Hugging Face project space">
+            <img src="assets/Hugging_Face_certificate.jpeg" alt="Hugging Face AI Agents Course certificate" class="cert-img" />
+            <span class="cert-name">AI Agents — Hugging Face</span>
           </a>
         </div>
       </div>
